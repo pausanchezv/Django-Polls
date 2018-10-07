@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'test2.apps.Test2Config',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
