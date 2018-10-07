@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import Question, Choice
 
 # Inlines
-class ChoiceInline(admin.TabularInline):  
+class ChoiceInline(admin.TabularInline):
     model = Choice
 
 
