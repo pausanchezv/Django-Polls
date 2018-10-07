@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+
+
+    {% if question_list %}
+        {% for question in question_list %}
+             <li>
+                 <a href="{% url 'detail' question.id %}">{{ question.question_text }}</a>
+                <ul>
+                    {% for choice in question.choice_set.all %}
+                        <li>{{ choice.choice_text }}</li>
+                    {% endfor %}
+                </ul>
+             </li>
+        {% endfor %}
+
+    {% else %}
+        <li>No questions.</li>
+    {% endif %}
+
+</ul>
+
+</body>
+</html>
